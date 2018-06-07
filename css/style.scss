@@ -1,0 +1,404 @@
+@import "normalize";
+@import "layout";
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800');
+
+$text-color: #fff;
+$base-font-family: Raleway, sans-serif;
+
+body{
+	font: 300 16px/2 $base-font-family;
+	color: $text-color;
+	background: #020407;
+}
+h1,h3,h4,h5,h6{
+	margin: 0;
+}
+h2{
+	color: rgba(255, 255, 255, 0.0117647);
+	font-size: 128px;
+	font-weight: 800;
+	line-height: 26px;
+	text-transform: uppercase;
+	margin: 0;
+
+}
+p {
+	margin: 0;
+}
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1210px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	color: $text-color;
+	text-decoration: none;
+	font-size:18px ;
+	letter-spacing: 0.08em;
+	font-weight: 700;
+	svg{
+		vertical-align: middle;
+		fill:currentColor;
+	}
+	&:hover{
+		color:#ef4836;
+	}
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+	&:hover{
+
+	}
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	&:focus{
+
+	}
+}
+
+// Intro
+
+.ba-intro{
+	background: #020407 url(../img/background.jpg) no-repeat 0;
+	background-size: cover;
+	padding-top: 65px;
+	position: relative;
+	z-index: 0;
+	&__gradient{
+		position: absolute;
+		background: linear-gradient(top, rgba(2,4,7,0.01),rgba(2,4,7,0.91));
+		height: 167px;
+		bottom:0;
+		left: 0;
+		right: 0;
+	}
+	&:before {
+			display: block;
+			content:'';
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background: rgba(5,5,5,0.74);
+			z-index: -1;
+	}
+	&:after{
+		display:block;
+
+		content:'';
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background: linear-gradient(top, rgba(3, 24, 51, 0.68),rgba(0, 0, 0, 0.68));
+		z-index: -1;
+	}
+}
+.ba-header {
+	display:flex;
+	justify-content: space-between;
+	margin-bottom: 210px;
+
+}
+.ba-nav {
+	text-transform: uppercase;
+	margin: 0;
+	font-size: 14px;
+	line-height: 26px;
+	padding-top: 7px;
+	a{
+		font-size: 14px;
+		padding-left: 41px;
+		font-weight: 600px;
+		letter-spacing: 0.08em;
+	}
+}
+
+.ba-description {
+	margin-left: 67px;
+	max-width: 510px;
+		&__title{
+		font-weight: 300;
+		font-size: 48px;
+		line-height: 55px;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		text-align: left;
+		margin-bottom: 30px;
+		position: relative;
+			&:before {
+				position: absolute;
+				content: "";
+				border: 1px solid #fff;
+				width: 90px;
+				top: 18px;
+				left: -130px;
+
+			}
+		}
+		&__info{
+			font-weight: 200;
+			color:  #fcfcfc;
+			letter-spacing: 0.08em;
+			margin-bottom: 29px;
+		}
+}
+
+// ABOUT
+.ba-container__about{
+
+}
+.ba-about{
+	padding-top: 194px;
+	&__content{
+		background: #265FB2 url(../img/bg-about.jpg) no-repeat;
+		background-size: cover;
+		padding: 127px 0 70px 48px;
+		position:relative;
+	}
+	&__title{
+		position:absolute;
+		left: 0;
+		top: -105px;
+		line-height: 1;
+
+	}
+	&__post{
+		font-weight: 300;
+		padding-top: 12px;
+		margin-left: 16px;
+		max-width: 518px;
+		p {
+			margin-bottom: 28px;
+		}
+		&:before{
+			position: absolute;
+			content: "";
+			border: 1px solid #fff;
+			width: 38px;
+			top: 155px;
+			left: 0;
+		}
+
+	}
+	&__photo{
+		img{
+		margin-top: -284px;
+		padding-left: 32px;
+
+		}
+	}
+}
+
+// SERVICES
+
+.ba-services{
+	padding-top: 180px;
+
+	&__container{
+		position:relative;
+	}
+	&__title{
+		position: absolute;
+		top: -45px;
+		right: 0;
+	}
+	&__post{
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 26px;
+		letter-spacing: 0.06em;
+		margin: 0;
+		margin-bottom: 28px;
+
+	}
+	&--creative{
+		position:relative;
+		padding-left: 55px;
+		&:before{
+			content: "";
+			background: #020407 url(../img/creative-icon.png) no-repeat center;
+			width:32px;
+			height: 25px;
+			position: absolute;
+			left: 0;
+			top: -1px;
+
+		}
+	}
+	&--professional{
+		position:relative;
+		padding-left: 55px;
+		&:before{
+			content: "";
+			background: #020407 url(../img/prof_icon.png) no-repeat center;
+			width:31px;
+			height: 25px;
+			position: absolute;
+			left: 0;
+			top: -1px;
+		}
+	}
+	&--money{
+		position:relative;
+		padding-left: 55px;
+		&:before{
+			content: "";
+			background: #020407 url(../img/money_icon.png) no-repeat center;
+			width:30px;
+			height: 25px;
+			position: absolute;
+			left: 0;
+			top: -1px;
+		}
+	}
+	p{
+
+		font-size: 14px;
+		font-weight: 200;
+		line-height: 30px;
+		margin-bottom: 15px;
+		letter-spacing: 0.06em;
+	}
+}
+
+// WORKS
+.ba-works{
+	padding-top: 180px;
+	position:relative;
+	&__title{
+		position: absolute;
+		left:20px;
+
+	}
+
+}
+.ba-container__works{
+	display: flex;
+	justify-content: flex-end;
+	a {
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 26px;
+		padding-left: 44px;
+		letter-spacing: 0.06em;
+		color:  #595959;
+		&:hover{
+			color: #fff;
+		}
+	}
+}
+.ba-projects {
+	display: flex;
+	&__row {
+		display: flex;
+		flex-direction: row;
+		padding-bottom: 7px;
+		margin-left: -7px;
+	}
+	&__col {
+		display: flex;
+		flex-direction: column;
+		padding-left: 7px;
+	}
+	&__col--4{
+		width: 30.2%;
+	}
+	&__col--8{
+		width: 69.8%;
+	}
+	&__col--5{
+		width: 43%;
+	}
+	&__col--7{
+		width: 57%;
+	}
+	&__link {
+		height: 100%;
+		width: 100%;
+		&:hover{
+			opacity: 0.8;
+		}
+		& img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit:cover;
+		}
+	}
+}
+
+//iNFORM//
+.ba-testimonial{
+	padding-top:290px;
+	margin-bottom: 160px;
+}
+.ba-information{
+
+	background: #ef4836;
+}
+.ba-information--post{
+	float:right;
+	padding: 147px 20px 100px 300px;
+	p{
+		max-width: 490px;
+
+	}
+
+}
+.ba-information-row{
+	position:relative;
+}
+.ba-information-autor{
+
+	img{
+		// float:left;
+		position:absolute;
+		top: -70px;
+		left: 70px;
+	}
+}
+.ba-creato-logo{
+	margin-bottom: 100px;
+	opacity: .26
+}
+//Contact//
+
+.ba-adress{
+	&__title{
+		margin: 0;
+		font: 700 20px/1 $base-font-family;
+		padding-bottom: 5px;
+		margin-top: 32px;
+
+	}
+	a{
+		font-size: 14px;
+		line-height:26px;
+		font-weight:300;
+		font-style: normal;
+	}
+
+}
